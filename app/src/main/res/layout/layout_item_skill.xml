@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_line_black"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <com.ebabu.engineerbabu.customview.CustomTextView
+        android:id="@+id/tv_platform_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="Android"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/primary_text_color"
+        android:textSize="16sp"
+        app:edittextfont="Bariol_Regular.otf" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/cb_platform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        app:buttonTint="@color/accentColor" />
+</LinearLayout>

@@ -1,0 +1,234 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.ebabu.engineerbabu.customview.CustomTextView
+            android:id="@+id/btn_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="20dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:text="@string/edit_profile"
+            android:textColor="@color/primary_text_color"
+            android:textSize="16sp"
+            app:edittextfont="Bariol_Regular.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/divider_color" />
+
+        <com.ebabu.engineerbabu.customview.CustomTextView
+            android:id="@+id/btn_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="20dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:text="@string/change_password"
+            android:textColor="@color/primary_text_color"
+            android:textSize="16sp"
+            app:edittextfont="Bariol_Regular.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawablePadding="20dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="15dp"
+                android:text="@string/chat_notifications"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                app:edittextfont="Bariol_Regular.otf" />
+
+            <com.rey.material.widget.Switch
+                android:id="@+id/switch_chat_noti"
+                style="@style/Material.Widget.Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                app:sw_thumbRadius="11dp"
+                app:sw_trackCap="round"
+                app:sw_trackSize="16dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/divider_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawablePadding="20dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="15dp"
+                android:text="@string/other_notifications"
+                android:textColor="@color/primary_text_color"
+                android:textSize="16sp"
+                app:edittextfont="Bariol_Regular.otf" />
+
+            <com.rey.material.widget.Switch
+                android:id="@+id/switch_other_noti"
+                style="@style/Material.Widget.Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                app:sw_thumbRadius="11dp"
+                app:sw_trackCap="round"
+                app:sw_trackSize="16dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="visible"
+            android:background="@color/divider_color" />
+
+        <com.ebabu.engineerbabu.customview.CustomTextView
+            android:id="@+id/btn_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="20dp"
+            android:focusable="true"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:text="@string/about"
+            android:textColor="@color/primary_text_color"
+            android:textSize="16sp"
+            app:edittextfont="Bariol_Regular.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/divider_color"
+            android:visibility="visible"/>
+
+        <com.ebabu.engineerbabu.customview.CustomTextView
+            android:id="@+id/btn_help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="20dp"
+            android:focusable="true"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:text="@string/help"
+            android:textColor="@color/primary_text_color"
+            android:textSize="16sp"
+            app:edittextfont="Bariol_Regular.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/divider_color" />
+
+        <com.ebabu.engineerbabu.customview.CustomTextView
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:drawablePadding="20dp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:text="@string/logout"
+            android:textColor="@color/primary_text_color"
+            android:textSize="16sp"
+            app:edittextfont="Bariol_Regular.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/divider_color" />
+    </LinearLayout>
+</LinearLayout>

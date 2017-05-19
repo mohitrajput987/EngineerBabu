@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_notifications"
+        android:icon="@mipmap/notification"
+        android:orderInCategory="1"
+        android:title="Notifications"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_discussion"
+        android:icon="@mipmap/msg"
+        android:orderInCategory="2"
+        android:title="Discussion"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@mipmap/filter"
+        android:orderInCategory="3"
+        android:title="Filter Projects"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,84 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/darkPrimaryColor</item>
+        <item name="colorControlNormal">@color/divider_color</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="colorControlHighlight">@color/drawer_background</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="FullScreenAppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorAccent">@color/drawer_background</item>
+        <item name="colorControlNormal">@color/primary_text_color</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="InOutColorsCircularProgressDrawableStylenew" parent="Material.Drawable.CircularProgress">
+        <item name="cpd_inAnimDuration">500</item>
+        <item name="cpd_inStepPercent">1.0</item>
+        <item name="cpd_inStepColors">@array/progress_colors</item>
+        <item name="cpd_outAnimDuration">500</item>
+        <item name="cpd_strokeColors">@array/progress_colors</item>
+        <item name="cpd_maxSweepAngle">350</item>
+    </style>
+
+    <style name="MyCalendarTheme" parent="Material.App.Dialog.DatePicker">
+        <item name="dp_yearTextSize">@dimen/abc_text_size_title_material</item>
+        <item name="dp_yearItemHeight">48dp</item>
+        <item name="dp_textColor">@color/abc_primary_text_material_dark</item>
+        <item name="dp_textHighlightColor">@color/white</item>
+        <item name="dp_selectionColor">@color/drawer_divider_color</item>
+        <item name="dp_animDuration">@android:integer/config_mediumAnimTime</item>
+        <item name="dp_inInterpolator">@android:anim/decelerate_interpolator</item>
+        <item name="dp_outInterpolator">@android:anim/decelerate_interpolator</item>
+        <item name="dp_textStyle">normal</item>
+        <item name="dp_dayTextSize">@dimen/abc_text_size_caption_material</item>
+        <item name="dp_textLabelColor">@color/abc_secondary_text_material_dark</item>
+        <item name="dp_textDisableColor">@color/abc_secondary_text_material_dark</item>
+        <item name="dp_headerPrimaryHeight">144dp</item>
+        <item name="dp_headerSecondaryHeight">32dp</item>
+        <item name="dp_headerPrimaryColor">@color/drawer_divider_color</item>
+        <item name="dp_headerSecondaryColor">@color/light_blue</item>
+        <item name="dp_headerPrimaryTextSize">@dimen/abc_text_size_display_2_material</item>
+        <item name="dp_headerSecondaryTextSize">@dimen/abc_text_size_headline_material</item>
+        <item name="dp_textHeaderColor">#90FFFFFF</item>
+    </style>
+
+    <style name="ColorsLinearProgressDrawableStyle" parent="Material.Drawable.LinearProgress">
+        <item name="lpd_strokeColors">@array/array_welcome_screen_colors</item>
+        <item name="lpd_strokeSecondaryColor">#00000000</item>
+    </style>
+
+
+    <style name="MyTimePickerTheme" parent="Material.App.Dialog.TimePicker">
+        <item name="tp_backgroundColor">@color/drawer_divider_color</item>
+        <item name="tp_selectionColor">@color/primaryColor</item>
+        <item name="tp_selectionRadius">16dp</item>
+        <item name="tp_tickSize">1dp</item>
+        <item name="tp_textSize">@dimen/abc_text_size_caption_material</item>
+        <item name="tp_textStyle">normal</item>
+        <item name="tp_textColor">@color/abc_primary_text_material_dark</item>
+        <item name="tp_textHighlightColor">#FFFFFFFF</item>
+        <item name="tp_animDuration">@android:integer/config_mediumAnimTime</item>
+        <item name="tp_inInterpolator">@android:anim/decelerate_interpolator</item>
+        <item name="tp_outInterpolator">@android:anim/decelerate_interpolator</item>
+        <item name="tp_mode">hour</item>
+        <item name="tp_headerHeight">100dp</item>
+        <item name="tp_textTimeSize">@dimen/abc_text_size_display_2_material</item>
+        <item name="tp_textTimeColor">#90FFFFFF</item>
+        <item name="tp_leadingZero">false</item>
+        <item name="tp_24Hour">false</item>
+    </style>
+
+</resources>

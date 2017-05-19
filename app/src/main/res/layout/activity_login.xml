@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/splash_logo" />
+
+    <com.ebabu.engineerbabu.customview.CustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="LOG IN AND GET TO WORK"
+        android:textColor="@color/divider_color"
+        android:textSize="20sp"
+        app:edittextfont="Bariol_Regular.otf" />
+
+    <com.ebabu.engineerbabu.customview.CustomEditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bottom_line_gray"
+        android:drawableLeft="@mipmap/mail"
+        android:drawablePadding="10dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/primary_text_color"
+        android:textColorHint="@color/divider_color"
+        android:textSize="16sp"
+        app:edittextfont="Bariol_Regular.otf"
+        app:edittextfontHint="Bariol_Regular.otf" />
+
+    <com.ebabu.engineerbabu.customview.CustomEditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bottom_line_gray"
+        android:drawableLeft="@mipmap/password"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/primary_text_color"
+        android:textColorHint="@color/divider_color"
+        android:textSize="16sp"
+        app:edittextfont="Bariol_Regular.otf"
+        app:edittextfontHint="Bariol_Regular.otf" />
+
+    <com.ebabu.engineerbabu.customview.CustomTextView
+        android:id="@+id/btn_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Forgot Password?"
+        android:textColor="@color/primaryColor"
+        android:textSize="16sp"
+        app:edittextfont="Bariol_Regular.otf" />
+
+    <com.ebabu.engineerbabu.customview.CustomTextView
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/yellow_rounded_corner_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:edittextfont="Bariol_Regular.otf" />
+
+    <com.ebabu.engineerbabu.customview.CustomTextView
+        android:id="@+id/btn_post_project"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/green_rounded_corner_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="POST PROJECT FREE"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:edittextfont="Bariol_Regular.otf" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.ebabu.engineerbabu.customview.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are you freelancer or company?"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="16sp"
+            app:edittextfont="Bariol_Regular.otf" />
+
+        <com.ebabu.engineerbabu.customview.CustomTextView
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Now"
+            android:textColor="@color/accentColor"
+            android:textSize="17sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="5dp"
+            app:edittextfont="Bariol_Regular.otf" />
+    </LinearLayout>
+</LinearLayout>

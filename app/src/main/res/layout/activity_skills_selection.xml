@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <com.ebabu.engineerbabu.customview.CustomEditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_line_gray"
+        android:drawableLeft="@mipmap/search_gray"
+        android:drawablePadding="10dp"
+        android:hint="Search skills..."
+        android:inputType="text"
+        android:paddingBottom="12dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="12dp"
+        android:textColor="@color/primary_text_color"
+        android:textColorHint="@color/divider_color"
+        android:textSize="16sp"
+        app:edittextfont="Bariol_Regular.otf"
+        app:edittextfontHint="Bariol_Regular_Italic.otf" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_platform"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" />
+
+    <com.ebabu.engineerbabu.customview.CustomTextView
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/yellow_rounded_corner_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="SAVE"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:edittextfont="Bariol_Regular.otf" />
+</LinearLayout>

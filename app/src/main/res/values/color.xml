@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#00796b</color>
+    <color name="darkPrimaryColor">#003129</color>
+    <color name="accentColor">#fb8c00</color>
+    <color name="light_gray">#DEDEDE</color>
+    <color name="category_divider_gray">#e6e6e6</color>
+    <color name="very_light_gray">#f4f4f4</color>
+    <color name="parrot_green">#31AE14</color>
+    <color name="dark_parrot_green">#278512</color>
+    <color name="medium_red">#DC4C12</color>
+    <color name="dark_red">#BB3D0B</color>
+    <color name="primary_text_color">#212121</color>
+    <color name="transparent_black_color">#CC212121</color>
+    <color name="transparent_header_color">#22212121</color>
+    <color name="secondary_text_color">#727272</color>
+    <color name="drawer_item_color">#707e87</color>
+    <color name="light_primary_color">#D7CCC8</color>
+    <color name="divider_color">#B6B6B6</color>
+    <color name="dark_gray">#707070</color>
+    <color name="light_blue">#00a9e0</color>
+    <color name="drawer_background">#1976D2</color>
+    <color name="drawer_divider_color">#1888d2</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent_white">#ccffffff</color>
+    <color name="lol_red">#ff4e50</color>
+    <color name="mud_color">#fcbe32</color>
+    <color name="dark_mud_color">#ea8819</color>
+    <color name="bottle_green">#1ca378</color>
+    <color name="yellow">#FFA000</color>
+    <color name="gray">#707070</color>
+    <array name="progress_colors">
+        <item>@color/mud_color</item>
+        <item>@color/accentColor</item>
+        <item>@color/accentColor</item>
+    </array>
+
+    <array name="array_welcome_screen_colors">
+        <item>#0f54ca</item>
+        <item>#1ca378</item>
+        <item>#7fa9d9</item>
+        <item>#0f54ca</item>
+        <item>#e08417</item>
+    </array>
+</resources>

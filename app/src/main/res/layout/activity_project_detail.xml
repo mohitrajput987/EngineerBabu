@@ -1,0 +1,407 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/gray_rounded_corner_bg"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.ebabu.engineerbabu.customview.CustomTextView
+                                android:id="@+id/tv_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="12"
+                                android:textColor="@color/primary_text_color"
+                                android:textSize="20sp"
+                                app:edittextfont="Bariol_Bold.otf" />
+
+                            <com.ebabu.engineerbabu.customview.CustomTextView
+                                android:id="@+id/tv_month_year"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:text="May, 2017"
+                                android:textColor="@color/primary_text_color"
+                                android:textSize="12sp"
+                                app:edittextfont="Bariol_Regular.otf" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/divider_color" />
+
+                            <com.ebabu.engineerbabu.customview.CustomTextView
+                                android:id="@+id/tv_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="OPEN"
+                                android:textColor="@color/accentColor"
+                                android:textSize="14sp"
+                                app:edittextfont="Bariol_Regular.otf" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="vertical">
+
+                            <com.ebabu.engineerbabu.customview.CustomTextView
+                                android:id="@+id/tv_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="false"
+                                android:text="I want to make an application for Android"
+                                android:textColor="@color/primaryColor"
+                                android:textSize="18sp"
+                                app:edittextfont="Bariol_Bold.otf" />
+
+                            <com.ebabu.engineerbabu.customview.CustomTextView
+                                android:id="@+id/tv_skills"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:drawableLeft="@mipmap/graphic"
+                                android:drawablePadding="5dp"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="Android Studio, GoogleMaps, Networking"
+                                android:textColor="@color/primaryColor"
+                                android:textSize="14sp"
+                                app:edittextfont="Bariol_Regular.otf" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <com.ebabu.engineerbabu.customview.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="false"
+                            android:text="PROJECT DESCRIPTION"
+                            android:textColor="@color/primaryColor"
+                            android:textSize="16sp"
+                            app:edittextfont="Bariol_Regular.otf" />
+
+                        <com.ebabu.engineerbabu.customview.CustomTextView
+                            android:id="@+id/tv_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="I have a website and I want to develop app of similar like this and blah blah blah. I have enough money that I can buy your house twenty times. Just make my project I have a website and I want to develop app of similar like this and blah blah blah. I have enough money I have a website and I want to develop app of similar like this and blah blah blah. I have enough money I have a website and I want to develop app of similar like this and blah blah blah. I have enough money I have a website and I want to develop app of similar like this and blah blah blah. I have enough money "
+                            android:textColor="@color/secondary_text_color"
+                            android:textSize="16sp"
+                            app:edittextfont="Bariol_Regular.otf" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.ebabu.engineerbabu.customview.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="false"
+                        android:text="APPLY"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <com.ebabu.engineerbabu.customview.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tip: "
+                            android:textColor="@color/accentColor"
+                            android:textSize="14sp"
+                            app:edittextfont="Bariol_Regular.otf" />
+
+                        <com.ebabu.engineerbabu.customview.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Putting an appropriate cover letter will help you to win this project."
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="14sp"
+                            app:edittextfont="Bariol_Regular.otf" />
+
+                    </LinearLayout>
+
+                    <com.ebabu.engineerbabu.customview.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Assumptions"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf" />
+
+
+                    <com.ebabu.engineerbabu.customview.CustomEditText
+                        android:id="@+id/et_assumption"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_rounded_corner_bg"
+                        android:gravity="top|left"
+                        android:hint="Assumptions regarding project (Max 50 characters)"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:padding="15dp"
+                        android:singleLine="false"
+                        android:textColor="@color/primary_text_color"
+                        android:textColorHint="@color/divider_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf"
+                        app:edittextfontHint="Bariol_Regular.otf" />
+
+                    <com.ebabu.engineerbabu.customview.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Suggestions"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf" />
+                    <com.ebabu.engineerbabu.customview.CustomEditText
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_rounded_corner_bg"
+                        android:gravity="top|left"
+                        android:hint="Suggestions regarding project (Max 50 characters)"
+                        android:inputType="textMultiLine"
+                        android:maxLength="50"
+                        android:padding="15dp"
+                        android:singleLine="false"
+                        android:textColor="@color/primary_text_color"
+                        android:textColorHint="@color/divider_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf"
+                        app:edittextfontHint="Bariol_Regular.otf" />
+
+                    <com.ebabu.engineerbabu.customview.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Reference Links (Optional)"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf" />
+
+                    <com.ebabu.engineerbabu.customview.CustomEditText
+                        android:id="@+id/et_url1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_rounded_corner_bg"
+                        android:hint="URL - 1 (Optional)"
+                        android:inputType="textUri"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text_color"
+                        android:textColorHint="@color/divider_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf"
+                        app:edittextfontHint="Bariol_Regular.otf" />
+
+                    <com.ebabu.engineerbabu.customview.CustomEditText
+                        android:id="@+id/et_url2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_rounded_corner_bg"
+                        android:hint="URL - 2 (Optional)"
+                        android:inputType="textUri"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text_color"
+                        android:textColorHint="@color/divider_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf"
+                        app:edittextfontHint="Bariol_Regular.otf" />
+
+                    <com.ebabu.engineerbabu.customview.CustomEditText
+                        android:id="@+id/et_url3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_rounded_corner_bg"
+                        android:hint="URL - 3 (Optional)"
+                        android:inputType="textUri"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text_color"
+                        android:textColorHint="@color/divider_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf"
+                        app:edittextfontHint="Bariol_Regular.otf" />
+
+                    <com.ebabu.engineerbabu.customview.CustomEditText
+                        android:id="@+id/et_url4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_rounded_corner_bg"
+                        android:hint="URL - 4 (Optional)"
+                        android:inputType="textUri"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text_color"
+                        android:textColorHint="@color/divider_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf"
+                        app:edittextfontHint="Bariol_Regular.otf" />
+
+                    <com.ebabu.engineerbabu.customview.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Approx Budget"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf" />
+                    <com.ebabu.engineerbabu.customview.CustomEditText
+                        android:id="@+id/et_budget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_rounded_corner_bg"
+                        android:hint="Approx Budget(\u20b9)"
+                        android:inputType="number"
+                        android:maxLines="8"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text_color"
+                        android:textColorHint="@color/divider_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf"
+                        app:edittextfontHint="Bariol_Regular.otf" />
+                    <com.ebabu.engineerbabu.customview.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Approx Days"
+                        android:textColor="@color/primary_text_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf" />
+                    <com.ebabu.engineerbabu.customview.CustomEditText
+                        android:id="@+id/et_days"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gray_rounded_corner_bg"
+                        android:hint="Approx days"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:padding="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text_color"
+                        android:textColorHint="@color/divider_color"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf"
+                        app:edittextfontHint="Bariol_Regular.otf" />
+
+                    <com.ebabu.engineerbabu.customview.CustomTextView
+                        android:id="@+id/btn_apply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/yellow_rounded_corner_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="APPLY"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:edittextfont="Bariol_Regular.otf" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="20dp">
+
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_circle"
+                android:src="@mipmap/add_profile" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_circle"
+                android:src="@mipmap/add_profile" />
+
+
+        </FrameLayout>
+
+        <com.ebabu.engineerbabu.customview.CustomTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Stone Cold"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:edittextfont="Bariol_Regular.otf" />
+
+        <com.ebabu.engineerbabu.customview.CustomTextView
+            android:id="@+id/tv_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="EngineerBabu Pvt. Ltd."
+            android:textColor="@color/accentColor"
+            android:textSize="14sp"
+            app:edittextfont="Bariol_Regular.otf" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:id="@+id/btn_my_portfolio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/my_portfolio"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/drawer_item_margin"
+                android:paddingRight="@dimen/drawer_item_margin"
+                android:paddingTop="10dp"
+                android:text="My Porfolio"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:edittextfont="Bariol_Regular.otf" />
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:id="@+id/btn_running_projects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/projects"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/drawer_item_margin"
+                android:paddingRight="@dimen/drawer_item_margin"
+                android:paddingTop="10dp"
+                android:text="Running Projects"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:edittextfont="Bariol_Regular.otf" />
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:id="@+id/btn_my_bids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/bids"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/drawer_item_margin"
+                android:paddingRight="@dimen/drawer_item_margin"
+                android:paddingTop="10dp"
+                android:text="Applied Bids"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:edittextfont="Bariol_Regular.otf" />
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:id="@+id/btn_subscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/my_portfolio"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/drawer_item_margin"
+                android:paddingRight="@dimen/drawer_item_margin"
+                android:paddingTop="10dp"
+                android:text="Subscriptions"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:edittextfont="Bariol_Regular.otf" />
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:id="@+id/btn_connects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/connect"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/drawer_item_margin"
+                android:paddingRight="@dimen/drawer_item_margin"
+                android:paddingTop="10dp"
+                android:text="Connects"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:edittextfont="Bariol_Regular.otf" />
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:id="@+id/btn_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/setting"
+                android:drawablePadding="10dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/drawer_item_margin"
+                android:paddingRight="@dimen/drawer_item_margin"
+                android:paddingTop="10dp"
+                android:text="Settings"
+                android:textColor="@color/secondary_text_color"
+                android:textSize="18sp"
+                app:edittextfont="Bariol_Regular.otf" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

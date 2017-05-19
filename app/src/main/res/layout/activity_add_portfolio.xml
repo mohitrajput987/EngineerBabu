@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="PLATFORMS"
+                android:textColor="@color/primaryColor"
+                android:textSize="20sp"
+                app:edittextfont="Bariol_Regular.otf" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_platform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:scrollbars="none" />
+
+            <com.ebabu.engineerbabu.customview.CustomEditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gray_rounded_corner_bg"
+                android:hint="Enter Title"
+                android:inputType="textShortMessage"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/primary_text_color"
+                android:textColorHint="@color/divider_color"
+                android:textSize="16sp"
+                app:edittextfont="Bariol_Regular.otf"
+                app:edittextfontHint="Bariol_Regular.otf" />
+
+            <com.ebabu.engineerbabu.customview.CustomEditText
+                android:id="@+id/et_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gray_rounded_corner_bg"
+                android:hint="Enter URL"
+                android:inputType="textUri"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textColor="@color/primary_text_color"
+                android:textColorHint="@color/divider_color"
+                android:textSize="16sp"
+                app:edittextfont="Bariol_Regular.otf"
+                app:edittextfontHint="Bariol_Regular.otf" />
+
+            <com.ebabu.engineerbabu.customview.CustomEditText
+                android:id="@+id/et_description"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gray_rounded_corner_bg"
+                android:gravity="top|left"
+                android:hint="Enter the description of your project"
+                android:inputType="textMultiLine"
+                android:padding="15dp"
+                android:singleLine="false"
+                android:textColor="@color/primary_text_color"
+                android:textColorHint="@color/divider_color"
+                android:textSize="16sp"
+                app:edittextfont="Bariol_Regular.otf"
+                app:edittextfontHint="Bariol_Regular.otf" />
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Add Image"
+                android:textColor="@color/divider_color"
+                android:textSize="16sp"
+                app:edittextfont="Bariol_Regular.otf" />
+
+            <com.ebabu.engineerbabu.customview.SquareImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/default_image" />
+
+            <com.ebabu.engineerbabu.customview.CustomTextView
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/yellow_rounded_corner_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="ADD PORTFOLIO"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:edittextfont="Bariol_Regular.otf" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
