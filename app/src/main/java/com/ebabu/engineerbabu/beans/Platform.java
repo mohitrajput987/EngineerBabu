@@ -4,38 +4,33 @@ package com.ebabu.engineerbabu.beans;
  * Created by hp on 12/05/2017.
  */
 public class Platform {
-    private String id;
-    private String name;
-    private int resId;
+    private String category_id;
+    private String category_name;
+    private String category_image;
     private boolean isChecked;
 
-    public Platform(String name, int resId) {
-        this.name = name;
-        this.resId = resId;
+    public String getCategory_id() {
+        return category_id;
     }
 
-    public String getId() {
-        return id;
+    public void setCategory_id(String category_id) {
+        this.category_id = category_id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getCategory_image() {
+        return category_image;
     }
 
-    public String getName() {
-        return name;
+    public void setCategory_image(String category_image) {
+        this.category_image = category_image;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getCategory_name() {
+        return category_name;
     }
 
-    public int getResId() {
-        return resId;
-    }
-
-    public void setResId(int resId) {
-        this.resId = resId;
+    public void setCategory_name(String category_name) {
+        this.category_name = category_name;
     }
 
     public boolean isChecked() {

@@ -26,6 +26,8 @@ public class DataHandler {
         this.userType = userType;
     }
 
+
+
     public static void reset() {
         dataHandler = null;
     }

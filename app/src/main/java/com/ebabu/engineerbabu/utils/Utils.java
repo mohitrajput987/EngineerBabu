@@ -31,7 +31,6 @@ import android.widget.Toast;
 import com.ebabu.engineerbabu.R;
 import com.ebabu.engineerbabu.activity.LoginActivity;
 import com.ebabu.engineerbabu.activity.SplashActivity;
-import com.ebabu.engineerbabu.beans.Platform;
 import com.ebabu.engineerbabu.constant.IKeyConstants;
 import com.ebabu.engineerbabu.customview.CustomTextView;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
@@ -46,10 +45,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
@@ -276,6 +273,16 @@ public class Utils {
 
     public static boolean isNameValid(String fullName) {
         String regx = "^[\\p{L} .'-]+$";
+
+        if (fullName == null) {
+            return false;
+        } else {
+            return Pattern.matches(regx, fullName);
+        }
+    }
+
+    public static boolean isAlphabetsOnly(String fullName) {
+        String regx = "[a-zA-Z]";
 
         if (fullName == null) {
             return false;
@@ -557,11 +564,15 @@ public class Utils {
         return false;
     }
 
-    public static List<Platform> getPlatformList() {
-        List<Platform> listPlatforms = new ArrayList<>();
-        for (int i = 0; i < PLATFORM_NAMES.length; i++) {
-            listPlatforms.add(new Platform(PLATFORM_NAMES[i], PLATFORM_IMAGES[i]));
-        }
-        return listPlatforms;
+//    public static List<Platform> getPlatformList() {
+//        List<Platform> listPlatforms = new ArrayList<>();
+//        for (int i = 0; i < PLATFORM_NAMES.length; i++) {
+//            listPlatforms.add(new Platform(PLATFORM_NAMES[i], PLATFORM_IMAGES[i]));
+//        }
+//        return listPlatforms;
+//    }
+
+    public static Bitmap getBitmapFromFilePath(String filePath) {
+        return BitmapFactory.decodeFile(filePath);
     }
 }

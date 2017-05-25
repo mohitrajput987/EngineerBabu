@@ -7,8 +7,12 @@ import org.json.JSONArray;
  */
 public interface IKeyConstants {
 
+    int REG_STATUS_1 = 1;
+    int REG_STATUS_2 = 2;
+    int REG_STATUS_3 = 3;
     int RQ_SIGN_FROM_INSIDE = 101;
     JSONArray JSON_ARRAY = new JSONArray();
+    String FILESTACK_API_KEY = "A2E8AbpyUQi2CHuboDekyz";
     String HELPSHIFT_API_KEY = "ac3d814277aed963dd692c6fbb662522";
     String HELPSHIFT_APP_ID = "neverno-technologies-private-limited_platform_20170330104832179-bda4eeee91046c4";
     String HELPSHIFT_DOMAIN = "neverno-technologies-private-limited.helpshift.com";
@@ -150,4 +154,7 @@ public interface IKeyConstants {
     String LNG = "lng";
 
     String FROM_INSIDE = "FROM_INSIDE";
+
+    int MIN_MOBILE_LENGTH = 6;
+    int MAX_MOBILE_LENGTH = 13;
 }

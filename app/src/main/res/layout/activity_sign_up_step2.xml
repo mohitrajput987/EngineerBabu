@@ -73,7 +73,7 @@
             android:orientation="vertical">
 
             <com.ebabu.engineerbabu.customview.CustomEditText
-                android:id="@+id/et_description"
+                android:id="@+id/et_about_me"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginLeft="10dp"
@@ -93,7 +93,7 @@
 
 
             <com.ebabu.engineerbabu.customview.CustomEditText
-                android:id="@+id/et_company_name"
+                android:id="@+id/et_company_url"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -163,26 +163,6 @@
                 android:drawableLeft="@mipmap/earth"
                 android:drawablePadding="10dp"
                 android:hint="Twitter URL (Optional)"
-                android:inputType="textUri"
-                android:paddingBottom="10dp"
-                android:paddingRight="10dp"
-                android:textColor="@color/primary_text_color"
-                android:textColorHint="@color/divider_color"
-                android:textSize="16sp"
-                app:edittextfont="Bariol_Regular.otf"
-                app:edittextfontHint="Bariol_Regular.otf" />
-
-            <com.ebabu.engineerbabu.customview.CustomEditText
-                android:id="@+id/et_gplus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bottom_line_gray"
-                android:drawableLeft="@mipmap/gplus"
-                android:drawablePadding="10dp"
-                android:hint="Google Plus URL (Optional)"
                 android:inputType="textUri"
                 android:paddingBottom="10dp"
                 android:paddingRight="10dp"

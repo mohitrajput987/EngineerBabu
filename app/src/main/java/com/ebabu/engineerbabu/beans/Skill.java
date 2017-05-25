@@ -4,29 +4,29 @@ package com.ebabu.engineerbabu.beans;
  * Created by hp on 13/05/2017.
  */
 public class Skill {
-    private int id;
-    private String name;
+    private int skill_id;
+    private String skill_name;
     private boolean isChecked;
 
-    public Skill(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public Skill(int skill_id, String skill_name) {
+        this.skill_id = skill_id;
+        this.skill_name = skill_name;
     }
 
     public int getId() {
-        return id;
+        return skill_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int skill_id) {
+        this.skill_id = skill_id;
     }
 
     public String getName() {
-        return name;
+        return skill_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String skill_name) {
+        this.skill_name = skill_name;
     }
 
     public boolean isChecked() {
@@ -39,13 +39,13 @@ public class Skill {
 
     @Override
     public int hashCode() {
-        return id;
+        return skill_id;
     }
 
     @Override
     public boolean equals(Object obj) {
         Skill skill = (Skill) obj;
-        if (this.id == skill.getId()) {
+        if (this.skill_id == skill.getId()) {
             return true;
         }
         return false;
@@ -54,8 +54,8 @@ public class Skill {
     @Override
     public String toString() {
         return "Skill{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+                "skill_id=" + skill_id +
+                ", name='" + skill_name + '\'' +
                 '}';
     }
 }

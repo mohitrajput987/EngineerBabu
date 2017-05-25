@@ -6,12 +6,16 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 
+import com.androidquery.AQuery;
 import com.ebabu.engineerbabu.R;
 import com.ebabu.engineerbabu.beans.Platform;
+import com.ebabu.engineerbabu.constant.IKeyConstants;
 import com.ebabu.engineerbabu.customview.CustomTextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,11 +24,12 @@ import java.util.List;
 public class PlatformAdapter extends RecyclerView.Adapter<PlatformAdapter.PlatformViewHolder> {
 
     private Context context;
-    private List<Platform> listPlatforms;
+    private List<Platform> listPlatforms, selectedListPlatforms;
 
     public PlatformAdapter(Context context, List<Platform> listPlatforms) {
         this.context = context;
         this.listPlatforms = listPlatforms;
+        selectedListPlatforms = new ArrayList<>();
     }
 
     @Override
@@ -35,11 +40,25 @@ public class PlatformAdapter extends RecyclerView.Adapter<PlatformAdapter.Platfo
 
     @Override
     public void onBindViewHolder(PlatformViewHolder holder, int position) {
-        Platform platform = listPlatforms.get(position);
-
+        final Platform platform = listPlatforms.get(position);
+        holder.cbPlatform.setOnCheckedChangeListener(null);
         holder.cbPlatform.setChecked(platform.isChecked());
-        holder.ivPlatform.setImageResource(platform.getResId());
-        holder.tvPlatformName.setText(platform.getName());
+        if (platform.getCategory_image() != null && platform.getCategory_image().startsWith(IKeyConstants.HTTP)) {
+            new AQuery(context).id(holder.ivPlatform).image(platform.getCategory_image());
+        } else {
+            holder.ivPlatform.setImageResource(R.mipmap.smm);
+        }
+        holder.tvPlatformName.setText(platform.getCategory_name());
+        holder.cbPlatform.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    selectedListPlatforms.add(platform);
+                } else {
+                    selectedListPlatforms.remove(platform);
+                }
+            }
+        });
     }
 
     @Override
@@ -60,4 +79,17 @@ public class PlatformAdapter extends RecyclerView.Adapter<PlatformAdapter.Platfo
             tvPlatformName = (CustomTextView) itemView.findViewById(R.id.tv_platform_name);
         }
     }
+
+    public String getSelectedPlatformsInCsv() {
+        if (selectedListPlatforms.size() == 0) {
+            return IKeyConstants.EMPTY;
+        } else {
+            String csvString = selectedListPlatforms.get(0).getCategory_id();
+            for (Platform platform : selectedListPlatforms) {
+                csvString = csvString + IKeyConstants.COMMA + platform.getCategory_id();
+            }
+            return csvString;
+        }
+    }
+
 }

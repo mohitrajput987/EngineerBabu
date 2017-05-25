@@ -15,7 +15,6 @@ import com.androidquery.callback.AjaxCallback;
 import com.androidquery.callback.AjaxStatus;
 import com.ebabu.engineerbabu.R;
 import com.ebabu.engineerbabu.adapter.SkillsAdapter;
-import com.ebabu.engineerbabu.beans.Notification;
 import com.ebabu.engineerbabu.beans.Skill;
 import com.ebabu.engineerbabu.constant.IKeyConstants;
 import com.ebabu.engineerbabu.constant.IUrlConstants;
@@ -31,9 +30,7 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class SkillsSelectionActivity extends AppCompatActivity {
 
@@ -93,14 +90,9 @@ public class SkillsSelectionActivity extends AppCompatActivity {
     private void fetchSkillsList() {
 
         final MyLoading myLoading = new MyLoading(context);
-        myLoading.show("Loading notifications");
+        myLoading.show("Loading skills");
 
-        final Map<String, String> params = new HashMap<>();
-        params.put("search_key", "");
-
-
-        Log.d(TAG, "fetchSkillsList(): params=" + params);
-        new AQuery(context).ajax(IUrlConstants.SKILLS_LIST, params, JSONObject.class, new AjaxCallback<JSONObject>() {
+        new AQuery(context).ajax(IUrlConstants.SKILLS_LIST + "?search_key=", JSONObject.class, new AjaxCallback<JSONObject>() {
             @Override
             public void callback(String url, JSONObject json, AjaxStatus status) {
 
@@ -108,16 +100,19 @@ public class SkillsSelectionActivity extends AppCompatActivity {
                 if (json != null) {
                     try {
                         String strStatus = json.getString(IKeyConstants.STATUS);
+                        Log.d(TAG, "strStatus=" + strStatus);
                         if (IKeyConstants.SUCCESS.equalsIgnoreCase(strStatus)) {
                             JSONArray data = json.getJSONArray("data");
-                            Type type = new TypeToken<ArrayList<Notification>>() {
+                            Type type = new TypeToken<ArrayList<Skill>>() {
                             }.getType();
-
                             if (data != null && data.length() > 0) {
                                 ArrayList<Skill> tempListNotifications = new Gson().fromJson(data.toString(), type);
                                 if (tempListNotifications.size() > 0) {
+                                    listSkills.clear();
                                     listSkills.addAll(tempListNotifications);
                                     skillAdapter.notifyDataSetChanged();
+                                    etSearchSkills.setText("A");
+                                    etSearchSkills.setText(IKeyConstants.EMPTY);
                                 }
                             }
                         } else {
@@ -141,6 +136,6 @@ public class SkillsSelectionActivity extends AppCompatActivity {
                 }
                 myLoading.dismiss();
             }
-        }.header(IKeyConstants.SECRET_KEY, AppPreference.getInstance(context).getSecretKey()).fileCache(true).expire(CACHE_TIME));
+        }.header(IKeyConstants.SECRET_KEY, AppPreference.getInstance(context).getSecretKey()).fileCache(false).expire(CACHE_TIME));
     }
 }

@@ -33,5 +33,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-places:10.0.1'
     compile 'com.hbb20:ccp:1.7.6'
     compile 'com.google.firebase:firebase-messaging:10.0.1'
+    compile 'io.filepicker:filepicker-android:3.9.0'
 }
 apply plugin: 'com.google.gms.google-services'

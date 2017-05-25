@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.ebabu.engineerbabu.R;
 import com.ebabu.engineerbabu.adapter.PlatformAdapter;
+import com.ebabu.engineerbabu.beans.CachedData;
 import com.ebabu.engineerbabu.utils.Utils;
 
 public class AddPortfolioActivity extends AppCompatActivity {
@@ -30,7 +31,7 @@ public class AddPortfolioActivity extends AppCompatActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(context);
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        platformAdapter = new PlatformAdapter(context, Utils.getPlatformList());
+        platformAdapter = new PlatformAdapter(context, CachedData.getInstance().getListPlatforms());
         rvPlatform.setLayoutManager(layoutManager);
         rvPlatform.setAdapter(platformAdapter);
     }

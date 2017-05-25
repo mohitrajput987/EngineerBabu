@@ -16,8 +16,6 @@
     <string name="logout">Logout</string>
     <string name="about">About</string>
     <string name="help">Help</string>
-    <string name="title_activity_client_home">ClientHomeActivity</string>
+    <string name="server_is_down">Seems that server is down. Please try after some time.</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
 </resources>

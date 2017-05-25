@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.ebabu.engineerbabu.R;
 import com.ebabu.engineerbabu.adapter.PlatformAdapter;
+import com.ebabu.engineerbabu.beans.CachedData;
 import com.ebabu.engineerbabu.beans.Skill;
 import com.ebabu.engineerbabu.constant.IKeyConstants;
 import com.ebabu.engineerbabu.customview.CustomTextView;
@@ -42,7 +43,7 @@ public class SignUpStep3Activity extends AppCompatActivity implements View.OnCli
         rvPlatform = (RecyclerView) findViewById(R.id.rv_platform);
         btnAddSkills = (CustomTextView) findViewById(R.id.btn_add_skills);
         GridLayoutManager layoutManager = new GridLayoutManager(context, 3);
-        platformAdapter = new PlatformAdapter(context, Utils.getPlatformList());
+        platformAdapter = new PlatformAdapter(context, CachedData.getInstance().getListPlatforms());
         rvPlatform.setLayoutManager(layoutManager);
         rvPlatform.setAdapter(platformAdapter);
 

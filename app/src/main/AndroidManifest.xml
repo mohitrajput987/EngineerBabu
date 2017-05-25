@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ebabu.engineerbabu" >
+    package="com.ebabu.engineerbabu">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".activity.SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/FullScreenAppTheme" >
+            android:theme="@style/FullScreenAppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,52 +62,47 @@
         <activity
             android:name=".activity.ProjectDetailActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".activity.PortfolioActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".activity.AddPortfolioActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".activity.AppliedBidsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".activity.RunningProjectsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".activity.NotificationsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".activity.SubscriptionActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".activity.ConnectsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".activity.SettingsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" >
-        </activity>
+            android:windowSoftInputMode="stateHidden"/>
         <activity
             android:name=".activity.ClientHomeActivity"
-            android:label="@string/title_activity_client_home" >
-        </activity>
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCoUY1wVCyT8JbkmYrH5wVc1nlGtxzsWxQ"/>
     </application>
 
 </manifest>
